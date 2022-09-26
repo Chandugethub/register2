@@ -1,0 +1,146 @@
+import java.awt.BorderLayout;
+import javax.swing.ButtonGroup;
+import java.awt.Color;
+import java.awt.Window;
+import javax.swing.JCheckBox;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+public class TabbedPane {
+
+	TabbedPane(){
+		
+	JTabbedPane pane=new JTabbedPane();
+	
+	JFrame frame=new JFrame();
+	
+	JCheckBox cb= new JCheckBox("c");
+	cb.setBounds(50,90,40,40);
+
+	JCheckBox cb2= new JCheckBox("java");
+	cb2.setBounds(100,90,80,40);
+	
+
+	
+	JCheckBox cb3= new JCheckBox("ds");
+	
+	cb3.setBounds(50,150,40,40);
+	
+	JCheckBox cb4=new JCheckBox("python");
+	cb4.setBounds(100,150,80,40);
+	
+	ButtonGroup b1=new ButtonGroup();
+	
+	b1.add(cb);
+	b1.add(cb2);
+	b1.add(cb3);
+	b1.add(cb4);
+//	JCheckBox cb5=new JCheckBox("");
+//	cb_.setBounds();
+	
+	JLabel name=new JLabel("name");
+	
+	JTextField textfield=new JTextField();
+	
+	JLabel pass=new JLabel("Password");
+	
+	JTextField pf=new JTextField();
+	
+	frame.setVisible(true);
+	frame.setSize(700,700);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setLayout(null);
+	
+	JPanel panel1=new JPanel();
+	
+	//panel1.add()
+	
+	panel1.add(cb);
+	panel1.add(cb2);
+	panel1.add(cb3);
+	panel1.add(cb4);
+
+	
+	panel1.setBackground(Color.LIGHT_GRAY);
+	JPanel panel2=new JPanel();
+	
+	
+	
+	panel2.setBackground(Color.yellow);
+
+	JPanel panel3=new JPanel();
+	
+	panel3.setBackground(Color.cyan);
+	
+	pane.setBounds(50,50,500,500);
+	
+	//pane.setBackground(Color.red);
+	
+	panel1.setLayout(null);
+	
+	panel2.setLayout(null);
+	
+	panel3.setLayout(null);
+
+
+	
+	name.setBounds(50,50,40,20);
+	
+	textfield.setBounds(100,50,100,20);
+	
+	JLabel rollnumber=new JLabel("rollnumber");
+	
+	JTextField rollfield=new JTextField();
+	
+	rollnumber.setBounds(50,70,40,20);
+	
+	rollfield.setBounds(100,70,100,20);
+	
+	JLabel email=new JLabel("email");
+	
+	JTextField ef=new JTextField();
+	
+	email.setBounds(50,200,50,40);
+	
+	ef.setBounds(100,200,100,40);
+	
+	pass.setBounds(50,245,60,40);
+	
+	pf.setBounds(110,245,100,40);
+	
+	panel1.add(pass);
+	
+	panel1.add(pf);
+	
+	panel1.add(rollnumber);
+	
+	panel1.add(rollfield);
+	
+	panel1.add(name);
+	
+	panel1.add(textfield);
+	panel1.add(email);
+
+	
+	pane.add("search",panel3);
+	
+	pane.add("login",panel2);
+	
+	pane.add("Registration",panel1);
+	
+	frame.add(pane);
+
+	
+
+	}
+	
+	public static void main(String args[]) {
+		
+		new TabbedPane();
+		
+	}
+}
+
